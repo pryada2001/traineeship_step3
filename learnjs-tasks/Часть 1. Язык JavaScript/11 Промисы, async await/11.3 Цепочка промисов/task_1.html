@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>1 Промисы: сравните then и catch</title>
+    </head>
+    <body>
+        <!-- Начало задания "1 Промисы: сравните then и catch" -->
+        <script>
+            'use strict';
+            // Являются ли фрагменты кода ниже эквивалентными? Другими словами, ведут ли они себя одинаково во всех обстоятельствах, для всех переданных им обработчиков?
+            promise.then(f1).catch(f2);
+            // Против:
+            promise.then(f1, f2);
+            // ОТВЕТ: фрагменты кода выше не являются эквивалентными и они ведут себя по-разному
+            // В 1 варианте, если ошибка возникнет в then(f1), то catch(f2) обработает эту ошибку
+            // Во 2 варианте, если ошибка возникнет в then(f1, f2), то она передастся дальше по цепочке .then / .catch
+        </script>
+        <!-- Конец задания "1 Промисы: сравните then и catch" -->
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>1 Ошибка создания экземпляра класса</title>
+    </head>
+    <body>
+        <!-- Начало задания "1 Ошибка создания экземпляра класса" -->
+        <script>
+            'use strict';
+            class Animal {
+                constructor(name) {
+                    this.name = name;
+                }
+            }
+
+            class Rabbit extends Animal {
+                constructor(name) {
+                    // this.name = name;
+                    super(name); // обращние к конструктору родителя
+                    this.created = Date.now();
+                }
+            }
+
+            let rabbit = new Rabbit('Белый кролик'); // теперь работает верно
+            alert(rabbit.name);
+        </script>
+        <!-- Конец задания "1 Ошибка создания экземпляра класса" -->
+    </body>
+</html>
